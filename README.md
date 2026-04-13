@@ -116,8 +116,7 @@ Retorna o score de um CPF usando o proxy.
 
 **URL:** http://localhost:8080/proxy/score?cpf=218.422.170-89  
 **Método**: GET  
-**Parâmetros de query**:  
-cpf (obrigatório)
+**Parâmetros de query**: cpf (obrigatório)
 
 ##### Exemplo com curl
 ```bash
@@ -132,7 +131,7 @@ Exemplo de resposta:
 #### RF2 – GET /metrics
 Retorna métricas simples do rate limiter.
 
-**URL:** http://localhost:8080/metrics
+**URL:** http://localhost:8080/metrics  
 **Método:** GET
 
 ```bash
