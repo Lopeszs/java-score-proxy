@@ -159,7 +159,7 @@ upstreamCalls: chamadas efetivas feitas para a API externa (limitadas a ~1/s).
 #### RF3 – GET /health
 Endpoint simples de liveness/readiness.
 
-**URL:** http://localhost:8080/health
+**URL:** http://localhost:8080/health  
 **Método:** GET
 
 ```bash
@@ -216,7 +216,7 @@ for i in {1..5}; do
        "https://score.hsborges.dev/api/score?cpf=218.422.170-89" &
 done
 wait
-.```
+```
 
 Nessa configuração, há risco de violar o limite de 1 req/s e sofrer a penalidade de +2s.
 
