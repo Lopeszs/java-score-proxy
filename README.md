@@ -89,6 +89,12 @@ No **mesmo terminal** em que você vai rodar o proxy:
 export CLIENT_ID="SEU_CLIENT_ID_AQUI"
 ```
 
+#### Windows (PowerShell)
+
+```bash
+$env:CLIENT_ID="SEU_CLIENT_ID_AQUI"
+```
+
 ### 2. Compilar o projeto
 Na raiz do projeto (onde estão os .java):
 
@@ -106,9 +112,7 @@ java ProxyMain
 
 Saída esperada:  
 
-```txt
-Proxy rodando em http://localhost:8080
-```
+![Proxy rodando](img/img1.png)
 
 ### Endpoints e exemplos de uso
 #### RF1 – GET /proxy/score
@@ -123,10 +127,8 @@ Retorna o score de um CPF usando o proxy.
 curl "http://localhost:8080/proxy/score?cpf=218.422.170-89"
 ```
 
-Exemplo de resposta:
-```json
-{"cpf":"218.422.170-89","score":308}
-```
+Resposta:
+![saída](img/img2.png)
 
 #### RF2 – GET /metrics
 Retorna métricas simples do rate limiter.
@@ -138,16 +140,10 @@ Retorna métricas simples do rate limiter.
 curl "http://localhost:8080/metrics"
 ```
 
-Exemplo de resposta:
+Resposta:
 
-```json
-{
-  "queueSize": 0,
-  "enqueued": 20,
-  "dropped": 0,
-  "upstreamCalls": 10
-}
-```
+![saída1](img/img3.png)
+
 Significado:
 
 queueSize: tamanho atual da fila interna.
@@ -166,14 +162,9 @@ Endpoint simples de liveness/readiness.
 curl "http://localhost:8080/health"
 ```
 
-Exemplo de resposta:
+Resposta:
 
-```json
-{
-  "status": "UP",
-  "queueSize": 0
-}
-```
+![saída2](img/img4.png)
 
 #### Seed de testes
 Para os testes da atividade foi usado o CPF de exemplo:
