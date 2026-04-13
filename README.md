@@ -211,6 +211,7 @@ Ideia: forçar chamadas paralelas diretas à API (sem proxy) e comparar com o us
 
 Chamadas diretas à API externa:
 
+```bash
 for i in {1..5}; do
   curl -s -H "client-id: $CLIENT_ID" \
        "https://score.hsborges.dev/api/score?cpf=218.422.170-89" &
