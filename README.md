@@ -104,20 +104,19 @@ Isso gera os .class na mesma pasta.
 java ProxyMain
 ```
 
-Saída esperada:
+Saída esperada:  
 
-*foto
-
+```txt
 Proxy rodando em http://localhost:8080
-
+```
 
 ### Endpoints e exemplos de uso
 #### RF1 – GET /proxy/score
 Retorna o score de um CPF usando o proxy.
 
-**URL:** http://localhost:8080/proxy/score?cpf=218.422.170-89
-**Método**: GET
-**Parâmetros de query**:
+**URL:** http://localhost:8080/proxy/score?cpf=218.422.170-89  
+**Método**: GET  
+**Parâmetros de query**:  
 cpf (obrigatório)
 
 ##### Exemplo com curl
